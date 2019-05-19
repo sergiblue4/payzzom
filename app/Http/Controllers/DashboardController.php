@@ -114,10 +114,10 @@ class DashboardController extends Controller
         if ($user_name == strtolower($user->first_name)) {
             $charges = $user->charges()->find($charge_id);
 
-            return view('getPayment')->with('user', $user)->with('charges', $charges);
+            return view('getpayment')->with('user', $user)->with('charges', $charges);
         }
         else{
-            abort('404', 'Error 404 There is no payment requests related to this user');
+            abort('404', 'Error 404 not found. There is no payment requests related to this user');
         }
         
     }

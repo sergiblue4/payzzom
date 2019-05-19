@@ -117,7 +117,7 @@ class DashboardController extends Controller
             return view('getpayment')->with('user', $user)->with('charges', $charges);
         }
         else{
-            abort('404', 'Error 404 not found. There is no payment requests related to this user');
+            abort('404', 'Error 404. There is no payment requests related to this user');
         }
         
     }
